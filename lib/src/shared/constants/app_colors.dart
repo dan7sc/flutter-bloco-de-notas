@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/widgets.dart';
 
 class AppColors {
@@ -13,6 +15,11 @@ class AppColors {
       purple
     ],
     begin: Alignment.topLeft,
-    end: Alignment.bottomLeft,
+    end: Alignment.bottomRight,
+    stops: [
+      0.1,
+      0.7,
+    ],
+    transform: GradientRotation((-34 * pi) / 180),
   );
 }
