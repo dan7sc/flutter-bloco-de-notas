@@ -11,25 +11,37 @@ class SplashPage extends StatefulWidget {
 class _SplashPageState extends State<SplashPage> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: double.infinity,
-      width: double.infinity,
-      decoration: BoxDecoration(
-        gradient: AppColors.blueGradient,
-      ),
-      child: Stack(
-        children: [
-          Center(
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Image.asset(
-                  "assets/images/notes_logo.png",
-                ),
-              ],
+    return Scaffold(
+      body: Container(
+        height: double.infinity,
+        width: double.infinity,
+        decoration: BoxDecoration(
+          gradient: AppColors.blueGradient,
+        ),
+        child: Stack(
+          children: [
+            Center(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Image.asset(
+                    "assets/images/notes_logo.png",
+                  ),
+                  Text(
+                    "journal",
+                    style: TextStyle(
+                      fontSize: 72.0,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.white,
+                      fontFamily: "Montserrant",
+                      letterSpacing: -0.05,
+                    ),
+                  ),
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
