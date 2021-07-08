@@ -27,14 +27,32 @@ class _SplashPageState extends State<SplashPage> {
                   Image.asset(
                     "assets/images/notes_logo.png",
                   ),
-                  Text(
-                    "journal",
-                    style: TextStyle(
-                      fontSize: 72.0,
-                      fontWeight: FontWeight.w700,
-                      color: Colors.white,
-                      fontFamily: "Montserrant",
-                      letterSpacing: -0.05,
+                  Center(
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text(
+                          "journal",
+                          style: TextStyle(
+                            fontSize: 72.0,
+                            fontWeight: FontWeight.w700,
+                            color: Colors.white,
+                            fontFamily: "Montserrant",
+                            letterSpacing: -0.05,
+                          ),
+                        ),
+                        Text(
+                          "YOUR ACADEMY'S BEST FRIEND",
+                          style: TextStyle(
+                            fontSize: 13.0,
+                            fontWeight: FontWeight.w300,
+                            color: Colors.white,
+                            fontFamily: "Montserrant",
+                            letterSpacing: 0.165,
+                          ),
+                          textAlign: TextAlign.end,
+                        ),
+                      ],
                     ),
                   ),
                 ],
