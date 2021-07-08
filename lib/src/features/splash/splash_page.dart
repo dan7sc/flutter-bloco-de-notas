@@ -17,6 +17,20 @@ class _SplashPageState extends State<SplashPage> {
       decoration: BoxDecoration(
         gradient: AppColors.blueGradient,
       ),
+      child: Stack(
+        children: [
+          Center(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Image.asset(
+                  "assets/images/notes_logo.png",
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
