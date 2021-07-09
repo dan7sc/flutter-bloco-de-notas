@@ -21,10 +21,7 @@ class _SplashPageState extends State<SplashPage> {
         child: Stack(
           children: [
             Align(
-              alignment: Alignment(
-                0.0,
-                -0.3,
-              ),
+              alignment: Alignment(0.0, -0.3),
               child: Image.asset(
                 "assets/images/notes_logo.png",
               ),
@@ -39,7 +36,7 @@ class _SplashPageState extends State<SplashPage> {
                       fontSize: 72.0,
                       fontWeight: FontWeight.w700,
                       color: Colors.white,
-                      fontFamily: "Montserrant",
+                      fontFamily: "Montserrat",
                       letterSpacing: -0.05,
                     ),
                   ),
@@ -49,7 +46,7 @@ class _SplashPageState extends State<SplashPage> {
                       fontSize: 13.0,
                       fontWeight: FontWeight.w300,
                       color: Colors.white,
-                      fontFamily: "Montserrant",
+                      fontFamily: "Montserrat",
                       letterSpacing: 0.165,
                     ),
                     textAlign: TextAlign.end,
