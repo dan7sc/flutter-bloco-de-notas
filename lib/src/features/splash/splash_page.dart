@@ -88,6 +88,9 @@ class _SplashPageState extends State<SplashPage> {
                       height: 8.0,
                     ),
                     Image.asset("assets/images/raro_academy_logo.png"),
+                    SizedBox(
+                      height: 40.0,
+                    ),
                   ],
                 ),
               ),
