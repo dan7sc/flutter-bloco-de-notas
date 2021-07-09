@@ -23,6 +23,7 @@ class _SplashPageState extends State<SplashPage> {
           children: [
             Center(
               child: Column(
+                mainAxisSize: MainAxisSize.min,
                 children: [
                   Positioned(
                     top: (MediaQuery.of(context).size.height / 2) - 100,
