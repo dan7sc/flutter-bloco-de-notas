@@ -61,6 +61,15 @@ class _SplashPageState extends State<SplashPage> {
                 ],
               ),
             ),
+            Positioned(
+              bottom: 50,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Image.asset("assets/images/raro_academy_logo.png"),
+                ],
+              ),
+            ),
           ],
         ),
       ),
