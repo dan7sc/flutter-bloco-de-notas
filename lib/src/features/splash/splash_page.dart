@@ -9,6 +9,17 @@ class SplashPage extends StatefulWidget {
 }
 
 class _SplashPageState extends State<SplashPage> {
+  late double screenHeight = 0.0;
+
+  @override
+  void initState() {
+    WidgetsFlutterBinding.ensureInitialized().addPostFrameCallback((timeStamp) {
+      screenHeight = MediaQuery.of(context).size.height;
+      setState(() {});
+    });
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,14 +30,18 @@ class _SplashPageState extends State<SplashPage> {
           gradient: AppColors.blueGradient,
         ),
         child: Stack(
+          // alignment: Alignment.center,
           children: [
+            Align(
+              alignment: Alignment(0.0, -(screenHeight * 0.0004)),
+              child: Image.asset(
+                "assets/images/notes_logo.png",
+              ),
+            ),
             Center(
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Image.asset(
-                    "assets/images/notes_logo.png",
-                  ),
                   Text(
                     "journal",
                     style: TextStyle(
