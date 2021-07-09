@@ -1,3 +1,4 @@
+import 'package:animated_card/animated_card.dart';
 import 'package:flutter/material.dart';
 import 'package:bloco_de_notas/src/shared/constants/app_colors.dart';
 
@@ -21,44 +22,48 @@ class _SplashPageState extends State<SplashPage> {
         child: Stack(
           alignment: Alignment.center,
           children: [
-            Stack(
-              alignment: Alignment.center,
-              children: [
-                Positioned(
-                  top: (MediaQuery.of(context).size.height / 2) - 100,
-                  child: Image.asset(
-                    "assets/images/notes_logo.png",
+            AnimatedCard(
+              direction: AnimatedCardDirection.top,
+              duration: Duration(seconds: 1),
+              child: Stack(
+                alignment: Alignment.center,
+                children: [
+                  Positioned(
+                    top: (MediaQuery.of(context).size.height / 2) - 100,
+                    child: Image.asset(
+                      "assets/images/notes_logo.png",
+                    ),
                   ),
-                ),
-                Center(
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Text(
-                        "journal",
-                        style: TextStyle(
-                          fontSize: 72.0,
-                          fontWeight: FontWeight.w700,
-                          color: Colors.white,
-                          fontFamily: "Montserrat",
-                          letterSpacing: -0.05,
+                  Center(
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text(
+                          "journal",
+                          style: TextStyle(
+                            fontSize: 72.0,
+                            fontWeight: FontWeight.w700,
+                            color: Colors.white,
+                            fontFamily: "Montserrat",
+                            letterSpacing: -0.05,
+                          ),
                         ),
-                      ),
-                      Text(
-                        "YOUR ACADEMY'S BEST FRIEND",
-                        style: TextStyle(
-                          fontSize: 13.0,
-                          fontWeight: FontWeight.w300,
-                          color: Colors.white,
-                          fontFamily: "Montserrat",
-                          letterSpacing: 0.165,
+                        Text(
+                          "YOUR ACADEMY'S BEST FRIEND",
+                          style: TextStyle(
+                            fontSize: 13.0,
+                            fontWeight: FontWeight.w300,
+                            color: Colors.white,
+                            fontFamily: "Montserrat",
+                            letterSpacing: 0.165,
+                          ),
+                          textAlign: TextAlign.end,
                         ),
-                        textAlign: TextAlign.end,
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
             Positioned(
               bottom: 40,
