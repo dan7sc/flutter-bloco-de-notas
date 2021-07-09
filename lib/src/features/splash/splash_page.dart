@@ -20,16 +20,13 @@ class _SplashPageState extends State<SplashPage> {
         ),
         child: Stack(
           children: [
-            Align(
-              alignment: Alignment(0.0, -0.3),
-              child: Image.asset(
-                "assets/images/notes_logo.png",
-              ),
-            ),
             Center(
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
+                  Image.asset(
+                    "assets/images/notes_logo.png",
+                  ),
                   Text(
                     "journal",
                     style: TextStyle(
