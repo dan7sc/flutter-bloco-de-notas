@@ -61,10 +61,23 @@ class _SplashPageState extends State<SplashPage> {
               ],
             ),
             Positioned(
-              bottom: 50,
+              bottom: 40,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
+                  Text(
+                    "powerred by",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w300,
+                      fontSize: 12.0,
+                      fontStyle: FontStyle.italic,
+                      fontFamily: "Roboto",
+                    ),
+                  ),
+                  SizedBox(
+                    height: 8.0,
+                  ),
                   Image.asset("assets/images/raro_academy_logo.png"),
                 ],
               ),
