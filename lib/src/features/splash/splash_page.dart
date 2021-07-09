@@ -65,29 +65,33 @@ class _SplashPageState extends State<SplashPage> {
                 ],
               ),
             ),
-            AnimatedCard(
-              direction: AnimatedCardDirection.bottom,
-              duration: Duration(seconds: 1),
-              child: Positioned(
-                bottom: 40,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Text(
-                      "powered by",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w300,
-                        fontSize: 12.0,
-                        fontStyle: FontStyle.italic,
-                        fontFamily: "Roboto",
+            Positioned(
+              bottom: 40.0,
+              child: AnimatedCard(
+                direction: AnimatedCardDirection.bottom,
+                duration: Duration(seconds: 1),
+                child: Positioned(
+                  bottom: 40,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        "powered by",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w300,
+                          fontSize: 12.0,
+                          fontStyle: FontStyle.italic,
+                          fontFamily: "Roboto",
+                        ),
                       ),
-                    ),
-                    SizedBox(
-                      height: 8.0,
-                    ),
-                    Image.asset("assets/images/raro_academy_logo.png"),
-                  ],
+                      SizedBox(
+                        height: 8.0,
+                      ),
+                      Image.asset("assets/images/raro_academy_logo.png"),
+                    ],
+                  ),
                 ),
               ),
             ),
