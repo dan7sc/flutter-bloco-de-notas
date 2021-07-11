@@ -21,6 +21,7 @@ class HomePageState extends State<HomePage> {
         child: Center(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Hero(
                 tag: "notes_logo",
@@ -35,7 +36,7 @@ class HomePageState extends State<HomePage> {
                   child: Text(
                     "journal",
                     style: TextStyle(
-                      fontSize: 72.0,
+                      fontSize: 48.0,
                       fontWeight: FontWeight.w700,
                       color: Colors.white,
                       fontFamily: "Montserrat",
