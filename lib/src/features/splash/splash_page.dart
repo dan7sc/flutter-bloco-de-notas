@@ -45,22 +45,28 @@ class _SplashPageState extends State<SplashPage> {
                 children: [
                   Positioned(
                     top: (MediaQuery.of(context).size.height / 2) - 100,
-                    child: Image.asset(
-                      "assets/images/notes_logo.png",
+                    child: Hero(
+                      tag: "notes_logo",
+                      child: Image.asset(
+                        "assets/images/notes_logo.png",
+                      ),
                     ),
                   ),
                   Center(
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        Text(
-                          "journal",
-                          style: TextStyle(
-                            fontSize: 72.0,
-                            fontWeight: FontWeight.w700,
-                            color: Colors.white,
-                            fontFamily: "Montserrat",
-                            letterSpacing: -0.05,
+                        Hero(
+                          tag: "journal",
+                          child: Text(
+                            "journal",
+                            style: TextStyle(
+                              fontSize: 72.0,
+                              fontWeight: FontWeight.w700,
+                              color: Colors.white,
+                              fontFamily: "Montserrat",
+                              letterSpacing: -0.05,
+                            ),
                           ),
                         ),
                         Text(

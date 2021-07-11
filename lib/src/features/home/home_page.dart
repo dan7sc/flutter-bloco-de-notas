@@ -18,6 +18,32 @@ class HomePageState extends State<HomePage> {
         decoration: BoxDecoration(
           gradient: AppColors.blueGradient,
         ),
+        child: Center(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Hero(
+                tag: "notes_logo",
+                child: Image.asset(
+                  "assets/images/notes_logo.png",
+                ),
+              ),
+              Hero(
+                tag: "journal",
+                child: Text(
+                  "journal",
+                  style: TextStyle(
+                    fontSize: 72.0,
+                    fontWeight: FontWeight.w700,
+                    color: Colors.white,
+                    fontFamily: "Montserrat",
+                    letterSpacing: -0.05,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
