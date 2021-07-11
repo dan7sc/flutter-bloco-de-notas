@@ -58,14 +58,17 @@ class _SplashPageState extends State<SplashPage> {
                       children: [
                         Hero(
                           tag: "journal",
-                          child: Text(
-                            "journal",
-                            style: TextStyle(
-                              fontSize: 72.0,
-                              fontWeight: FontWeight.w700,
-                              color: Colors.white,
-                              fontFamily: "Montserrat",
-                              letterSpacing: -0.05,
+                          child: Material(
+                            color: Colors.transparent,
+                            child: Text(
+                              "journal",
+                              style: TextStyle(
+                                fontSize: 72.0,
+                                fontWeight: FontWeight.w700,
+                                color: Colors.white,
+                                fontFamily: "Montserrat",
+                                letterSpacing: -0.05,
+                              ),
                             ),
                           ),
                         ),
