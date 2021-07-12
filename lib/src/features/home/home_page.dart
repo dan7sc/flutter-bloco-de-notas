@@ -94,12 +94,29 @@ class HomePageState extends State<HomePage> {
           decoration: BoxDecoration(
             gradient: AppColors.blueGradient,
             shape: BoxShape.circle,
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.12),
+                offset: Offset(0.0, 1.0),
+                blurRadius: 18.0,
+              ),
+              BoxShadow(
+                color: Colors.black.withOpacity(0.14),
+                offset: Offset(0.0, 6.0),
+                blurRadius: 10.0,
+              ),
+              BoxShadow(
+                color: Colors.black.withOpacity(0.2),
+                offset: Offset(0.0, 3.0),
+                blurRadius: 5.0,
+                spreadRadius: -1.0,
+              ),
+            ],
           ),
           child: Center(
             child: Icon(
               Icons.add,
               color: Colors.white,
-              size: 14.0,
             ),
           ),
         ),
