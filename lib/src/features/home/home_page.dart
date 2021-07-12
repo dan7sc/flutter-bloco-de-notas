@@ -53,6 +53,13 @@ class HomePageState extends State<HomePage> {
             Align(
               alignment: Alignment.bottomCenter,
               child: Card(
+                margin: EdgeInsets.zero,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(10.0),
+                    topRight: Radius.circular(10.0),
+                  ),
+                ),
                 child: Padding(
                   padding: const EdgeInsets.only(
                     top: 24.0,
