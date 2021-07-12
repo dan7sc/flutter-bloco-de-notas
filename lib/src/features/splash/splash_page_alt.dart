@@ -1,6 +1,7 @@
 import 'package:bloco_de_notas/src/features/home/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:bloco_de_notas/src/shared/constants/app_colors.dart';
+import 'package:flutter/rendering.dart';
 
 class SplashPage extends StatefulWidget {
   SplashPage({Key? key}) : super(key: key);
@@ -10,25 +11,32 @@ class SplashPage extends StatefulWidget {
 }
 
 class _SplashPageState extends State<SplashPage> with TickerProviderStateMixin {
-  late final AnimationController _topAnimationController = AnimationController(
-    vsync: this,
-    duration: Duration(seconds: 1)
-  );
-  late final AnimationController _bottomAnimationController = AnimationController(
-    vsync: this,
-    duration: Duration(seconds: 1)
-  );
+  late final AnimationController _topAnimationController =
+      AnimationController(vsync: this, duration: Duration(seconds: 1));
+  late final AnimationController _bottomAnimationController =
+      AnimationController(vsync: this, duration: Duration(seconds: 1));
   late Animation<double> topAnimation;
   late Animation<double> bottomAnimation;
+
+  late double topBegin = 0.0;
+  late double topEnd = 0.0;
+  late double bottomBegin = 0.0;
+  late double bottomEnd = 0.0;
 
   @override
   void initState() {
     super.initState();
+    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
+      topBegin = MediaQuery.of(context).size.height - (MediaQuery.of(context).size.height + 300);
+      topEnd = MediaQuery.of(context).size.height / 3.0;
+      bottomBegin = MediaQuery.of(context).size.height + 300;
+      bottomEnd = MediaQuery.of(context).size.height / 1.35;
 
-    topAnimation =
-        Tween(begin: -300.0, end: 220.0).animate(_topAnimationController);
-    bottomAnimation =
-        Tween(begin: 800.0, end: 450.0).animate(_bottomAnimationController);
+      topAnimation =
+        Tween(begin: topBegin, end: topEnd).animate(_topAnimationController);
+      bottomAnimation = Tween(begin: bottomBegin, end: bottomEnd)
+        .animate(_bottomAnimationController);
+    });
 
     _topAnimationController.forward();
     _bottomAnimationController.forward().whenCompleteOrCancel(() {
@@ -58,75 +66,74 @@ class _SplashPageState extends State<SplashPage> with TickerProviderStateMixin {
           alignment: Alignment.center,
           children: [
             AnimatedBuilder(
-              animation: _topAnimationController,
-              child: Stack(
-                alignment: Alignment.topCenter,
-                children: [
-                  Hero(
-                    tag: "image",
-                    child: Image.asset(
-                      "assets/images/notes_logo.png",
-                      width: 100,
-                    ),
-                  ),
-                  Column(
-                    children: [
-                      SizedBox(
-                        height: 50,
+                animation: _topAnimationController,
+                child: Stack(
+                  alignment: Alignment.topCenter,
+                  children: [
+                    Hero(
+                      tag: "image",
+                      child: Image.asset(
+                        "assets/images/notes_logo.png",
+                        width: 100,
                       ),
-                      Hero(
-                        tag: "text",
-                        child: Material(
-                          color: Colors.transparent,
-                          child: Text(
-                            "journal",
-                            style: TextStyle(
-                              fontSize: 72.0,
-                              fontWeight: FontWeight.w700,
-                              color: Colors.white,
-                              fontFamily: "Montserrat",
-                              letterSpacing: -0.05,
+                    ),
+                    Column(
+                      children: [
+                        SizedBox(
+                          height: 50,
+                        ),
+                        Hero(
+                          tag: "text",
+                          child: Material(
+                            color: Colors.transparent,
+                            child: Text(
+                              "journal",
+                              style: TextStyle(
+                                fontSize: 72.0,
+                                fontWeight: FontWeight.w700,
+                                color: Colors.white,
+                                fontFamily: "Montserrat",
+                                letterSpacing: -0.05,
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                      Text(
-                        "YOUR ACADEMY'S BEST FRIEND",
-                        style: TextStyle(
-                          fontSize: 13.0,
-                          fontWeight: FontWeight.w300,
-                          color: Colors.white,
-                          fontFamily: "Montserrat",
-                          letterSpacing: 0.165,
+                        Text(
+                          "YOUR ACADEMY'S BEST FRIEND",
+                          style: TextStyle(
+                            fontSize: 13.0,
+                            fontWeight: FontWeight.w300,
+                            color: Colors.white,
+                            fontFamily: "Montserrat",
+                            letterSpacing: 0.165,
+                          ),
+                          textAlign: TextAlign.end,
                         ),
-                        textAlign: TextAlign.end,
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-              builder: (BuildContext context, Widget? child) {
-                return Transform.translate(
-                  offset: Offset(Alignment.topCenter.x, topAnimation.value),
-                  child: child,
-                );
-              }
-            ),
+                      ],
+                    ),
+                  ],
+                ),
+                builder: (BuildContext context, Widget? child) {
+                  return Transform.translate(
+                    offset: Offset(Alignment.topCenter.x, topAnimation.value),
+                    child: child,
+                  );
+                }),
             AnimatedBuilder(
-              animation: _bottomAnimationController,
-              child: Column(
-                children: [
-                  Image.asset("assets/images/powered_by.png"),
-                  Image.asset("assets/images/raro_academy_logo.png"),
-                ],
-              ),
-              builder: (BuildContext context, Widget? child) {
-                return Transform.translate(
-                  offset: Offset(Alignment.topCenter.x, bottomAnimation.value),
-                  child: child,
-                );
-              }
-            ),
+                animation: _bottomAnimationController,
+                child: Column(
+                  children: [
+                    Image.asset("assets/images/powered_by.png"),
+                    Image.asset("assets/images/raro_academy_logo.png"),
+                  ],
+                ),
+                builder: (BuildContext context, Widget? child) {
+                  return Transform.translate(
+                    offset:
+                        Offset(Alignment.topCenter.x, bottomAnimation.value),
+                    child: child,
+                  );
+                }),
           ],
         ),
       ),
