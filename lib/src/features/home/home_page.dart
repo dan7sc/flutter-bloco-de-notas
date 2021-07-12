@@ -15,9 +15,12 @@ class HomePageState extends State<HomePage> {
     return Scaffold(
       body: Stack(
         children: [
-          Image.asset(
-            "assets/images/boy_with_phone.png",
-            fit: BoxFit.scaleDown,
+          SafeArea(
+            top: true,
+            child: Image.asset(
+              "assets/images/boy_with_phone.png",
+              fit: BoxFit.scaleDown,
+            ),
           ),
           Center(
             child: Row(
