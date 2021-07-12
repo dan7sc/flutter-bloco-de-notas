@@ -22,7 +22,8 @@ class HomePageState extends State<HomePage> {
               fit: BoxFit.scaleDown,
             ),
           ),
-          Center(
+          Align(
+            alignment: Alignment(Alignment.center.x, -0.22),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
