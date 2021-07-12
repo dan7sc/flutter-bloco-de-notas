@@ -1,6 +1,7 @@
 import 'package:bloco_de_notas/src/features/home/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:bloco_de_notas/src/shared/constants/app_colors.dart';
+import 'package:bloco_de_notas/src/shared/constants/text_styles.dart';
 import 'package:flutter/rendering.dart';
 
 class SplashPage extends StatefulWidget {
@@ -88,25 +89,13 @@ class _SplashPageState extends State<SplashPage> with TickerProviderStateMixin {
                             color: Colors.transparent,
                             child: Text(
                               "journal",
-                              style: TextStyle(
-                                fontSize: 72.0,
-                                fontWeight: FontWeight.w700,
-                                color: Colors.white,
-                                fontFamily: "Montserrat",
-                                letterSpacing: -0.05,
-                              ),
+                              style: TextStyles.white72w700Monserrat,
                             ),
                           ),
                         ),
                         Text(
                           "YOUR ACADEMY'S BEST FRIEND",
-                          style: TextStyle(
-                            fontSize: 13.0,
-                            fontWeight: FontWeight.w300,
-                            color: Colors.white,
-                            fontFamily: "Montserrat",
-                            letterSpacing: 0.165,
-                          ),
+                          style: TextStyles.white13w300Monserrat,
                           textAlign: TextAlign.end,
                         ),
                       ],

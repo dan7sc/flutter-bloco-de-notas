@@ -1,4 +1,5 @@
 import 'package:bloco_de_notas/src/shared/constants/app_colors.dart';
+import 'package:bloco_de_notas/src/shared/constants/text_styles.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -59,13 +60,7 @@ class HomePageState extends State<HomePage> {
                       color: Colors.transparent,
                       child: Text(
                         "journal",
-                        style: TextStyle(
-                          fontSize: 48.0,
-                          fontWeight: FontWeight.w700,
-                          color: Colors.white,
-                          fontFamily: "Montserrat",
-                          letterSpacing: -0.05,
-                        ),
+                        style: TextStyles.white48w700Montserrat,
                       ),
                     ),
                   ),
@@ -96,24 +91,14 @@ class HomePageState extends State<HomePage> {
                     children: [
                       Text(
                         "Não importa onde você\nesteja! Guarde suas ideias pra depois :)",
-                        style: TextStyle(
-                          fontFamily: "Roboto",
-                          fontWeight: FontWeight.w400,
-                          fontSize: 24.0,
-                          color: AppColors.purple,
-                        ),
+                        style: TextStyles.purple24w400Roboto,
                       ),
                       SizedBox(
                         height: 24.0,
                       ),
                       Text(
                         "Comece agora a criar as suas notas!",
-                        style: TextStyle(
-                          fontFamily: "Roboto",
-                          fontWeight: FontWeight.w400,
-                          fontSize: 16.0,
-                          color: AppColors.cyan,
-                        ),
+                        style: TextStyles.cyan16w400Roboto,
                       ),
                     ],
                   ),
