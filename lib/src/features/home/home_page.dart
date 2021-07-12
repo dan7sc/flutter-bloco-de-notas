@@ -38,6 +38,10 @@ class HomePageState extends State<HomePage> {
         ),
         child: Stack(
           children: [
+            Image.asset(
+              "assets/images/boy_with_phone.png",
+              fit: BoxFit.scaleDown,
+            ),
             Center(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
