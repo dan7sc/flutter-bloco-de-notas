@@ -12,6 +12,24 @@ class HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: InkWell(
+        child: Container(
+          width: 56.0,
+          height: 56.0,
+          decoration: BoxDecoration(
+            gradient: AppColors.blueGradient,
+            shape: BoxShape.circle,
+          ),
+          child: Center(
+            child: Icon(
+              Icons.add,
+              color: Colors.white,
+              size: 14.0,
+            ),
+          ),
+        ),
+      ),
       body: Container(
         height: double.infinity,
         width: double.infinity,
