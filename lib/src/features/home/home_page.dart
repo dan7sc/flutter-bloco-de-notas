@@ -50,6 +50,47 @@ class HomePageState extends State<HomePage> {
                 ],
               ),
             ),
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Card(
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                    top: 24.0,
+                    bottom: 104.0,
+                    left: 40.0,
+                    right: 34.0,
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        "Não importa onde você\nesteja! Guarde suas ideias pra depois :)",
+                        style: TextStyle(
+                          fontFamily: "Roboto",
+                          fontWeight: FontWeight.w400,
+                          fontSize: 24.0,
+                          color: AppColors.purple,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 24.0,
+                      ),
+                      Text(
+                        "Comece agora a criar as suas notas!",
+                        style: TextStyle(
+                          fontFamily: "Roboto",
+                          fontWeight: FontWeight.w400,
+                          fontSize: 16.0,
+                          color: AppColors.cyan,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),
