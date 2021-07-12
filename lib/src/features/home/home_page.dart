@@ -57,30 +57,33 @@ class HomePageState extends State<HomePage> {
                   topRight: Radius.circular(10.0),
                 ),
               ),
-              child: Padding(
-                padding: const EdgeInsets.only(
-                  top: 24.0,
-                  bottom: 104.0,
-                  left: 40.0,
-                  right: 34.0,
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Text(
-                      "Não importa onde você\nesteja! Guarde suas ideias pra depois :)",
-                      style: TextStyles.purple24w400Roboto,
-                    ),
-                    SizedBox(
-                      height: 24.0,
-                    ),
-                    Text(
-                      "Comece agora a criar as suas notas!",
-                      style: TextStyles.cyan16w400Roboto,
-                    ),
-                  ],
+              child: Container(
+                height: MediaQuery.of(context).size.height * 0.45,
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                    top: 24.0,
+                    bottom: 104.0,
+                    left: 40.0,
+                    right: 34.0,
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        "Não importa onde você\nesteja! Guarde suas ideias pra depois :)",
+                        style: TextStyles.purple24w400Roboto,
+                      ),
+                      SizedBox(
+                        height: 24.0,
+                      ),
+                      Text(
+                        "Comece agora a criar as suas notas!",
+                        style: TextStyles.cyan16w400Roboto,
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
