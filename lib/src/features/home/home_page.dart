@@ -27,6 +27,7 @@ class HomePageState extends State<HomePage> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisSize: MainAxisSize.max,
               children: [
                 Hero(
                   tag: "notes_logo",
@@ -62,9 +63,9 @@ class HomePageState extends State<HomePage> {
                 child: Padding(
                   padding: const EdgeInsets.only(
                     top: 24.0,
-                    bottom: 104.0,
+                    bottom: 100.0,
                     left: 40.0,
-                    right: 34.0,
+                    right: 40.0,
                   ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
