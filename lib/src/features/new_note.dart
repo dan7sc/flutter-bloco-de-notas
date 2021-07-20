@@ -11,29 +11,29 @@ class NewNotePage extends StatefulWidget {
 class _NewNotePageState extends State<NewNotePage> {
   late DropDownItemData _value = DropDownItemData(
     color: AppColors.pink,
-    value: "rosa",
+    value: "pink",
   );
 
   final List<DropDownItemData> list = [
     DropDownItemData(
       color: AppColors.pink,
-      value: "rosa",
+      value: "pink",
     ),
     DropDownItemData(
       color: AppColors.green,
-      value: "verde",
+      value: "green",
     ),
     DropDownItemData(
       color: AppColors.purple,
-      value: "roxo",
+      value: "purple",
     ),
     DropDownItemData(
       color: AppColors.cyan,
-      value: "ciano",
+      value: "cyan",
     ),
     DropDownItemData(
       color: AppColors.yellow,
-      value: "amarelo",
+      value: "yellow",
     ),
   ];
 
@@ -114,22 +114,22 @@ class _NewNotePageState extends State<NewNotePage> {
                         },
                         focusColor: Colors.transparent,
                         items: list
-                        .map(
-                          (e) => DropdownMenuItem(
-                            value: e,
-                            child: Center(
-                              child: Container(
-                                height: 18.0,
-                                width: 18.0,
-                                decoration: BoxDecoration(
-                                  color: e.color,
-                                  shape: BoxShape.circle,
+                            .map(
+                              (e) => DropdownMenuItem(
+                                value: e,
+                                child: Center(
+                                  child: Container(
+                                    height: 18.0,
+                                    width: 18.0,
+                                    decoration: BoxDecoration(
+                                      color: e.color,
+                                      shape: BoxShape.circle,
+                                    ),
+                                  ),
                                 ),
                               ),
-                            ),
-                          ),
-                        )
-                        .toList(),
+                            )
+                            .toList(),
                       ),
                     ],
                   ),
