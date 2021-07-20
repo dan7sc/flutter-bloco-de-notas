@@ -27,7 +27,7 @@ class _SplashPageState extends State<SplashPage> with TickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
+    WidgetsFlutterBinding.ensureInitialized().addPostFrameCallback((timeStamp) {
       topBegin = MediaQuery.of(context).size.height - (MediaQuery.of(context).size.height + 300);
       topEnd = MediaQuery.of(context).size.height / 3.0;
       bottomBegin = MediaQuery.of(context).size.height + 300;
