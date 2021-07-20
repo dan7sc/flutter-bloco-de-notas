@@ -16,6 +16,41 @@ class _NewNotePageState extends State<NewNotePage> {
         centerTitle: true,
         elevation: 0.0,
       ),
+      body: Stack(
+        children: [
+          SingleChildScrollView(
+            child: Column(
+              children: [
+                TextField(
+                  decoration: InputDecoration(
+                    hintText: "Título",
+                    hintStyle: TextStyle(
+                      fontFamily: "Roboto",
+                      fontWeight: FontWeight.w700,
+                      fontSize: 16.0,
+                      letterSpacing: 0.15,
+                      color: Colors.black.withOpacity(0.54),
+                    ),
+                    labelStyle: TextStyle(
+                      fontFamily: "Roboto",
+                      fontWeight: FontWeight.w700,
+                      fontSize: 16.0,
+                      letterSpacing: 0.15,
+                      color: Colors.black.withOpacity(0.54),
+                    ),
+                    border: InputBorder.none,
+                    errorBorder: InputBorder.none,
+                    enabledBorder: InputBorder.none,
+                    focusedBorder: InputBorder.none,
+                    disabledBorder: InputBorder.none,
+                    focusedErrorBorder: InputBorder.none,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
