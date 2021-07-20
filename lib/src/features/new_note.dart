@@ -153,6 +153,9 @@ class _NewNotePageState extends State<NewNotePage> {
                       focusedErrorBorder: InputBorder.none,
                     ),
                   ),
+                  SizedBox(
+                    height: 24.0,
+                  ),
                 ],
               ),
             ),
