@@ -160,48 +160,55 @@ class _NewNotePageState extends State<NewNotePage> {
           Visibility(
             child: Align(
               alignment: Alignment.bottomCenter,
-              child: SafeArea(
-                bottom: true,
-                child: Card(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      IconButton(
-                        onPressed: () {},
-                        icon: Icon(
-                          Icons.date_range,
-                          color: Colors.black.withOpacity(0.54),
+              child: Padding(
+                padding: const EdgeInsets.only(
+                  left: 24.0,
+                  right: 24.0,
+                  bottom: 24.0,
+                ),
+                child: SafeArea(
+                  bottom: true,
+                  child: Card(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        IconButton(
+                          onPressed: () {},
+                          icon: Icon(
+                            Icons.date_range,
+                            color: Colors.black.withOpacity(0.54),
+                          ),
                         ),
-                      ),
-                      IconButton(
-                        onPressed: () {},
-                        icon: Icon(
-                          Icons.attach_file_outlined,
-                          color: Colors.black.withOpacity(0.54),
+                        IconButton(
+                          onPressed: () {},
+                          icon: Icon(
+                            Icons.attach_file_outlined,
+                            color: Colors.black.withOpacity(0.54),
+                          ),
                         ),
-                      ),
-                      IconButton(
-                        onPressed: () {},
-                        icon: Icon(
-                          Icons.favorite_border,
-                          color: Colors.black.withOpacity(0.54),
+                        IconButton(
+                          onPressed: () {},
+                          icon: Icon(
+                            Icons.favorite_border,
+                            color: Colors.black.withOpacity(0.54),
+                          ),
                         ),
-                      ),
-                      IconButton(
-                        onPressed: () {},
-                        icon: Icon(
-                          Icons.share,
-                          color: Colors.black.withOpacity(0.54),
+                        IconButton(
+                          onPressed: () {},
+                          icon: Icon(
+                            Icons.share,
+                            color: Colors.black.withOpacity(0.54),
+                          ),
                         ),
-                      ),
-                      IconButton(
-                        onPressed: () {},
-                        icon: Icon(
-                          Icons.delete,
-                          color: Colors.black.withOpacity(0.54),
+                        IconButton(
+                          onPressed: () {},
+                          icon: Icon(
+                            Icons.delete,
+                            color: Colors.black.withOpacity(0.54),
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),
