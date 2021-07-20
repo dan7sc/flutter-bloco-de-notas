@@ -158,6 +158,7 @@ class _NewNotePageState extends State<NewNotePage> {
             ),
           ),
           Visibility(
+            visible: MediaQuery.of(context).viewInsets.bottom == 0,
             child: Align(
               alignment: Alignment.bottomCenter,
               child: Padding(
