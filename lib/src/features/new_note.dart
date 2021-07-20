@@ -8,6 +8,14 @@ class NewNotePage extends StatefulWidget {
 class _NewNotePageState extends State<NewNotePage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        title: Image.asset("assets/images/app_bar_logo.png"),
+        backgroundColor: Colors.white,
+        centerTitle: true,
+        elevation: 0.0,
+      ),
+    );
   }
 }

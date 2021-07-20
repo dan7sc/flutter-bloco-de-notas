@@ -1,3 +1,4 @@
+import 'package:bloco_de_notas/src/features/new_note.dart';
 import 'package:bloco_de_notas/src/shared/constants/app_colors.dart';
 import 'package:bloco_de_notas/src/shared/constants/text_styles.dart';
 import 'package:flutter/material.dart';
@@ -18,12 +19,12 @@ class HomePageState extends State<HomePage> {
           SafeArea(
             top: true,
             child: Image.asset(
-              "assets/images/boy_with_phone.png",
+              "assets/images/empty_notes_background.png",
               fit: BoxFit.scaleDown,
             ),
           ),
           Align(
-            alignment: Alignment(Alignment.center.x, -0.22),
+            alignment: Alignment(Alignment.center.x, -0.33),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -59,22 +60,24 @@ class HomePageState extends State<HomePage> {
                 ),
               ),
               child: Container(
-                height: MediaQuery.of(context).size.height * 0.45,
+                height: MediaQuery.of(context).size.height * 0.4,
                 child: Padding(
                   padding: const EdgeInsets.only(
                     top: 24.0,
-                    bottom: 100.0,
                     left: 40.0,
                     right: 40.0,
                   ),
-                  child: Column(
+                  child: Flex(
+                    direction: Axis.vertical,
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Text(
-                        "Não importa onde você\nesteja! Guarde suas ideias pra depois :)",
-                        style: TextStyles.purple24w400Roboto,
+                      Flexible(
+                        child: Text(
+                          "Não importa onde você\nesteja! Guarde suas ideias pra depois :)",
+                          style: TextStyles.purple24w400Roboto,
+                        ),
                       ),
                       SizedBox(
                         height: 24.0,
@@ -93,6 +96,13 @@ class HomePageState extends State<HomePage> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: InkWell(
+        onTap: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (BuildContext context) => NewNotePage(),
+            ),
+          );
+        },
         child: Container(
           width: 56.0,
           height: 56.0,
