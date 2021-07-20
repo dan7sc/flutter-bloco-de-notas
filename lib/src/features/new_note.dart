@@ -1,3 +1,4 @@
+import 'package:bloco_de_notas/src/shared/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class NewNotePage extends StatefulWidget {
@@ -6,6 +7,40 @@ class NewNotePage extends StatefulWidget {
 }
 
 class _NewNotePageState extends State<NewNotePage> {
+  late DropDownItemData _value = DropDownItemData(
+    color: AppColors.pink,
+    value: "rosa",
+  );
+
+  final List<DropDownItemData> list = [
+    DropDownItemData(
+      color: AppColors.pink,
+      value: "rosa",
+    ),
+    DropDownItemData(
+      color: AppColors.green,
+      value: "verde",
+    ),
+    DropDownItemData(
+      color: AppColors.purple,
+      value: "roxo",
+    ),
+    DropDownItemData(
+      color: AppColors.cyan,
+      value: "ciano",
+    ),
+    DropDownItemData(
+      color: AppColors.yellow,
+      value: "amarelo",
+    ),
+  ];
+
+  @override
+  void initState() {
+    _value = list[0];
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,6 +81,46 @@ class _NewNotePageState extends State<NewNotePage> {
                     focusedErrorBorder: InputBorder.none,
                   ),
                 ),
+                DropdownButton(
+                  underline: Container(),
+                  onChanged: (value) {
+                    setState(() {
+                      _value = value as DropDownItemData;
+                    });
+                  },
+                  value: _value,
+                  selectedItemBuilder: (BuildContext context) {
+                    return list.map<Widget>((DropDownItemData item) {
+                      return Center(
+                        child: Container(
+                          height: 18.0,
+                          width: 18.0,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                          ),
+                        ),
+                      );
+                    }).toList();
+                  },
+                  focusColor: Colors.transparent,
+                  items: list
+                  .map(
+                    (e) => DropdownMenuItem(
+                      value: e,
+                      child: Center(
+                        child: Container(
+                          height: 18.0,
+                          width: 18.0,
+                          decoration: BoxDecoration(
+                            color: e.color,
+                            shape: BoxShape.circle,
+                          ),
+                        ),
+                      ),
+                    ),
+                  )
+                  .toList(),
+                ),
               ],
             ),
           ),
@@ -53,4 +128,14 @@ class _NewNotePageState extends State<NewNotePage> {
       ),
     );
   }
+}
+
+class DropDownItemData {
+  final Color color;
+  final String value;
+
+  DropDownItemData({
+    required this.color,
+    required this.value,
+  });
 }
